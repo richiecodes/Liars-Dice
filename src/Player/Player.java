@@ -23,14 +23,22 @@ public class Player {
         cup.peek();
     }
 
+    public int countValue(int value) {
+        return cup.countValue(value);
+    }
+
+    public void removeDie() {
+        cup.removeDie();
+    }
+
     //make claim
     //get from user two ints one for die value 1 - 6 and one for amount 1 - max dice
     public int[] getClaim() {
         int dieValue, dieCount;
 
 
-        dieValue = console.getInt(1, 6, "What die value: 1-6");
-        dieCount = console.getInt(1, 14, "How many " + dieValue + " dice:");
+        dieValue = console.getInt(1, 6, "Choose a die value between 1 and 6");
+        dieCount = console.getInt(1, 14, "How many " + dieValue + "'s?: ");
 
         return new int[] {dieValue, dieCount};
     }

@@ -43,4 +43,13 @@ public class Cup {
     public int size(){
         return dice.size();
     }
+
+    public int countValue(int value) {
+        int count = 0;
+        for(var die : dice) {
+            if(die.getValue() == value) count++;
+        }
+
+        return count;
+    }
 }

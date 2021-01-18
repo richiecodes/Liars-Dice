@@ -29,6 +29,15 @@ public class Console {
         System.out.println(query);
         return scan.nextLine();
     }
+
+    public static void cls() {
+        int i = 50;
+
+        while(i > 0) {
+            System.out.println("\n");
+            i--;
+        }
+    }
 }
 
 //getInt(1, 4, "i want a number")
